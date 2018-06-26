@@ -1,0 +1,105 @@
+
+  <div class="row">
+    <div class="col-md">
+      <nav style="text-align:right;margin-top:100px;">
+        <h6>  <a style="margin-right:20px" routerLink="/editor/newsList" routerLinkActive="active" >All News</a>
+          <a style="margin-right:60px" routerLink="/editor/verifiedList" >Verified News</a></h6>
+      </nav>
+    </div>
+  </div>
+
+
+  <div class="login">
+    <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div style="margin-top:10px" class="col-md-6">
+      <form  #userlogin = "ngForm" (ngSubmit) = "onApprove(userlogin.value)">
+        <ul class="list-group">
+          <li *ngFor="let news of newslist">
+            <div><li class={{news.name}}><input type="checkbox" [(ngModel)]="news.checked" [value]="news.name" [name]="news.name">  {{news.value}}</div>
+
+          </li>
+        </ul>
+      <!-- <ul class="list-group">
+        <li class="list-group-item list-group-item-success"><input type="checkbox" name="News1" value="true" ngModel> Checked Dapibus ac facilisis in</li>
+        <li class="list-group-item list-group-item-info"><input type="checkbox" name="News2" value="info" ngModel> Cras sit amet nibh libero</li>
+        <li class="list-group-item list-group-item-warning"><input type="checkbox" name="News3" value="Patially fake " ngModel> Porta ac consectetur ac</li>
+        <li class="list-group-item list-group-item-danger"><input type="checkbox" name="News4" value="Fake" ngModel> Vestibulum at eros</li>
+    </ul> -->
+    <div style="margin-left:250px;margin-top:20px">
+      <button style="margin-right:10px" type="button" (click) = "onApprove(userlogin.value)" class="btn btn-primary">Approve</button>
+      <button type="button" class="btn btn-secondary">Cancel</button>
+    </div>
+    </form>
+   </div>
+    </div>
+
+</div>
+    <!-- <div  class="row">
+      <div class="col-md-3">
+      </div>
+      <div style="margin-top:10px" class="col-md-6">
+        <div style="width:600px" class="card">
+          <div class="card-body">
+            This is some text within a card body.
+          <span class="badge badge-pill badge-success">True</span>
+
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div style="margin-top:10px" class="col-md-6">
+        <div style="width:600px" class="card">
+          <div class="card-body">
+            This is some text within a card body.
+            <span class="badge badge-pill badge-warning">Patially fake</span>
+
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div style="margin-top:10px" class="col-md-6">
+        <div style="width:600px" class="card">
+          <div class="card-body">
+            This is some text within a card body.
+            <span class="badge badge-pill badge-danger">Completely fake</span>
+
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div style="margin-top:10px" class="col-md-6">
+        <div style="width:600px" class="card">
+          <div class="card-body">
+            This is some text within a card body.
+            <span class="badge badge-pill badge-warning">Patially fake</span>
+
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div style="margin-top:10px" class="col-md-6">
+        <div style="width:600px" class="card">
+          <div class="card-body">
+            This is some text within a card body.
+            <span class="badge badge-success">True</span>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
